@@ -31,7 +31,7 @@ router.delete('/:messageId', (req, res) => {
 
     req.context.models.messages = otherMessages;
     
-    return req.send(message);
+    return res.send(message);
 });
 
 export default router;
