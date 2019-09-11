@@ -1,4 +1,16 @@
-let users = {
+import mongoose from 'mongoose';
+import User from './user';
+import Message from './message';
+
+const connectDb = () => {
+    return mongoose.connect(process.env.DATABASE_URL);
+};
+
+const models = { User, Message };
+export { connectDb };
+export default models;
+
+/* let users = {
     1: {
         id: '1',
         username: 'Robin Wieruch',
@@ -24,4 +36,4 @@ let messages = {
 export default {
     users,
     messages,
-};
+}; */
