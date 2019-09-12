@@ -6,7 +6,7 @@ const messageSchema = new mongoose.Schema({
         required: true,
     },
     user: {
-        type: mongoose.Schema.Types.ObjectId, 
+        type: mongoose.Schema.Types.ObjectId, //este ObjectId es un atributo que nos proporciona mongoose entre otros
         ref: 'User',
     },
 });
